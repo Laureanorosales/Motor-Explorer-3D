@@ -15,7 +15,7 @@
 
 ## 🤖 Desarrollo con Inteligencia Artificial
 
-> 💡 **Nota de autoría y transparencia para portfolio:**  
+> 💡 **Nota de autoría y transparencia:**  
 > Este proyecto fue concebido, diseñado y construido utilizando metodologías de **Vibe Coding y Pair Programming con Inteligencia Artificial (IA)**. 
 > 
 > La IA fue empleada de forma estratégica a lo largo de todo el ciclo de desarrollo:
@@ -123,8 +123,8 @@ motor-explorer/
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/TU_USUARIO/motor-explorer.git
-   cd motor-explorer
+   git clone https://github.com/Laureanorosales/Motor-Explorer-3D.git
+   cd Motor-Explorer-3D
    ```
 
 2. **Instalar dependencias:**
@@ -162,16 +162,6 @@ El proyecto está preparado para desplegarse con 1 solo clic en servicios estát
 
 - Los archivos [`vercel.json`](./vercel.json) y [`netlify.toml`](./netlify.toml) ya están incluidos en la raíz para garantizar el enrutamiento correcto de la SPA.
 - Consulta los pasos detallados en [`DEPLOYMENT.md`](./DEPLOYMENT.md).
-
----
-
-## 👨‍💻 Autor & Portfolio
-
-Desarrollado con dedicación técnica y entusiasmo automotriz.
-
-- **GitHub:** [@TU_USUARIO](https://github.com/)
-- **Portfolio:** [Enlace a tu portfolio web](https://tu-portfolio.com)
-- **LinkedIn:** [Enlace a tu perfil](https://linkedin.com/in/)
 
 ---
 
