@@ -1,0 +1,110 @@
+.appContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex: 1;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.standaloneInteractive {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.modeSwitcherBar {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: var(--shadow-card);
+}
+
+.modeTabs {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 980px;
+}
+
+.modeTabBtn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.modeTabBtn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.activeModeTab {
+  background: linear-gradient(135deg, rgba(139, 40, 70, 0.25), rgba(30, 77, 120, 0.25));
+  border-color: rgba(139, 40, 70, 0.5);
+  color: var(--text-primary);
+  box-shadow: 0 0 12px rgba(139, 40, 70, 0.2);
+}
+
+.diagramSelectorBar {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.selectorLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.architectureButtons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.archBtn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.archBtn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.activeArch {
+  background: rgba(139, 40, 70, 0.18);
+  border-color: rgba(139, 40, 70, 0.40);
+  color: #D6D3CE;
+}

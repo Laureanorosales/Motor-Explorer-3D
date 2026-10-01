@@ -1,0 +1,65 @@
+:root {
+  /* ── Fondos (negro carbón → azul marina muy oscuro) ── */
+  --bg-primary:     #09090C;
+  --bg-secondary:   #0F0F14;
+  --bg-card:        #13131A;
+  --bg-card-hover:  #1A1A24;
+  --bg-tertiary:    #1E1E2A;
+  --bg-input:       #0D0D12;
+
+  /* ── Acentos principales ── */
+  /* Bordo/vino — acento cálido, evoca manuales de taller desgastados */
+  --accent-primary:      #8B2846;
+  --accent-primary-soft: rgba(139, 40, 70, 0.20);
+  --accent-primary-glow: rgba(139, 40, 70, 0.30);
+
+  /* Azul petróleo profundo — acento frío, datos técnicos */
+  --accent-blue:      #1E4D78;
+  --accent-blue-mid:  #2A6099;
+  --accent-blue-soft: rgba(30, 77, 120, 0.25);
+  --accent-blue-glow: rgba(42, 96, 153, 0.30);
+
+  /* Dorado envejecido — sólo para valores destacados, usado con mucha mesura */
+  --accent-gold:      #B8860B;
+  --accent-gold-soft: rgba(184, 134, 11, 0.18);
+
+  /* Herencia (mantener compatibilidad con código existente) */
+  --accent-cyan:         #2A6099;
+  --accent-cyan-glow:    rgba(42, 96, 153, 0.25);
+  --accent-orange:       #8B2846;
+  --accent-orange-glow:  rgba(139, 40, 70, 0.25);
+  --accent-red:          #7A1E30;
+  --accent-red-glow:     rgba(122, 30, 48, 0.25);
+  --accent-green:        #2D5A3D;
+  --accent-green-glow:   rgba(45, 90, 61, 0.25);
+  --accent-yellow:       #8B6914;
+  --accent-purple:       #4A2D6B;
+
+  /* ── Texto ── */
+  --text-primary:   #D6D3CE;   /* crema muy apagada, no blanco puro */
+  --text-secondary: #7A7872;
+  --text-muted:     #4A4840;
+  --text-disabled:  #32302E;
+
+  /* ── Bordes ── */
+  --border-subtle: rgba(255, 255, 255, 0.055);
+  --border-medium: rgba(255, 255, 255, 0.10);
+  --border-accent: var(--accent-primary);
+
+  /* ── Geometría ── */
+  --radius-sm:   5px;
+  --radius-md:   9px;
+  --radius-lg:   14px;
+  --radius-full: 9999px;
+
+  /* ── Sombras ── */
+  --shadow-card: 0 10px 30px -8px rgba(0, 0, 0, 0.75), 0 4px 8px -4px rgba(0, 0, 0, 0.6);
+
+  /* Retrocompatibilidad */
+  --glow-cyan:   0 0 18px var(--accent-blue-glow);
+  --glow-orange: 0 0 18px var(--accent-primary-glow);
+
+  /* ── Transiciones ── */
+  --transition-fast:   0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}

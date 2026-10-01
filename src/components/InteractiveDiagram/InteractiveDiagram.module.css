@@ -1,0 +1,332 @@
+.container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+}
+
+.fullscreenContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  border-radius: 0;
+  padding: 1.5rem;
+  background: #09090C;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.diagramHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.85rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hdBadgeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.hdBadge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-tertiary);
+  padding: 0.12rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  letter-spacing: 0.04em;
+}
+
+.subBadge {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.diagramTitle {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.diagramSub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.12rem;
+}
+
+.headerControls {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.fullscreenBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.48rem 0.82rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.fullscreenBtn:hover {
+  background: rgba(139, 40, 70, 0.20);
+  border-color: rgba(139, 40, 70, 0.35);
+  color: var(--text-primary);
+}
+
+.activeFullscreen {
+  background: rgba(30, 77, 120, 0.20);
+  border-color: rgba(30, 77, 120, 0.35);
+  color: var(--text-primary);
+}
+
+.zoomControls {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--bg-primary);
+  padding: 0.22rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.controlBtn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: var(--transition-fast);
+}
+
+.controlBtn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 330px;
+  gap: 1.15rem;
+  min-height: 500px;
+  flex: 1;
+}
+
+/* El blueprint no compite: fondo muy oscuro, plano apagado */
+.svgContainer {
+  background: #060608;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.svgWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.svgElement {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.hotspotGroup {
+  cursor: pointer;
+}
+
+/* Hotspots en bordo y azul — no neón */
+.activePulse {
+  animation: hotspotPulse 2s infinite alternate;
+}
+
+@keyframes hotspotPulse {
+  0%   { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Panel de inspección lateral */
+.detailPanel {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.partCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.partHeader {
+  margin-bottom: 0.95rem;
+}
+
+.partBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.64rem;
+  font-weight: 600;
+  color: #8B2846;
+  background: rgba(139, 40, 70, 0.10);
+  padding: 0.18rem 0.55rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(139, 40, 70, 0.22);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+.targetIcon {
+  color: #8B2846;
+}
+
+.partTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.partSubName {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.78rem;
+  flex: 1;
+}
+
+.infoRow {
+  display: flex;
+  gap: 0.6rem;
+  background: var(--bg-card);
+  padding: 0.65rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.rowIcon {
+  color: #2A6099;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+.warningIcon {
+  color: #8B2846;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.rowLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.12rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.rowText {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.42;
+}
+
+.failureList {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  padding-left: 1rem;
+}
+
+.failureList li {
+  margin-bottom: 0.18rem;
+}
+
+.glossaryBtn {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  padding: 0.58rem 0.95rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: var(--transition-fast);
+}
+
+.glossaryBtn:hover {
+  background: rgba(30, 77, 120, 0.20);
+  border-color: rgba(30, 77, 120, 0.35);
+  color: var(--text-primary);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--text-muted);
+  gap: 0.8rem;
+  padding: 2rem;
+}
+
+.emptyIcon {
+  color: var(--text-muted);
+  opacity: 0.3;
+}
+
+@media (max-width: 900px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+}
