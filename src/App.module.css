@@ -108,3 +108,33 @@
   border-color: rgba(139, 40, 70, 0.40);
   color: #D6D3CE;
 }
+
+.footer {
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  padding: 1.5rem 1rem;
+  margin-top: auto;
+  text-align: center;
+}
+
+.footerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.copyright {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+}
+
+.footerNote {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}

@@ -172,6 +172,18 @@ export const App: React.FC = () => {
           onSelectPart={handleSelectPartForGlossary}
         />
       )}
+
+      {/* Footer con Copyright */}
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <div className={styles.copyright}>
+            &copy; {new Date().getFullYear()} Laureano Rosales. Todos los derechos reservados.
+          </div>
+          <div className={styles.footerNote}>
+            MotorExplorer &bull; Enciclopedia y Simulador Técnico Automotriz
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

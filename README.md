@@ -168,3 +168,7 @@ El proyecto está preparado para desplegarse con 1 solo clic en servicios estát
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia **MIT**. Consulta el archivo `LICENSE` para más detalles.
+
+---
+
+© 2026 Laureano Rosales. Todos los derechos reservados.
