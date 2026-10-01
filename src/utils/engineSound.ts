@@ -85,7 +85,7 @@ class EngineSoundSynthesizer {
     }
   }
 
-  private makeDistortionCurve(amount: number): Float32Array {
+  private makeDistortionCurve(amount: number): Float32Array<ArrayBuffer> {
     const k = typeof amount === 'number' ? amount : 20;
     const nSamples = 44100;
     const curve = new Float32Array(nSamples);

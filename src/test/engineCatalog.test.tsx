@@ -23,7 +23,7 @@ describe('MotorExplorer - EngineCatalog Component Tests', () => {
     fireEvent.change(configSelect, { target: { value: 'V8' } });
 
     expect(screen.getByText(/Dodge GTX 318 V8/i)).toBeInTheDocument();
-    expect(screen.queryByText(/Torino Tornado Interceptor 380W/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Torino Tornado Interceptor/i)).not.toBeInTheDocument();
   });
 
   it('filters engines by search input', () => {
@@ -33,20 +33,20 @@ describe('MotorExplorer - EngineCatalog Component Tests', () => {
     const searchInput = screen.getByPlaceholderText(/Buscar por motor/i);
     fireEvent.change(searchInput, { target: { value: 'Nissan' } });
 
-    expect(screen.getByText(/Nissan RB26DETT Twin-Turbo/i)).toBeInTheDocument();
-    expect(screen.queryByText(/Torino Tornado Interceptor 380W/i)).not.toBeInTheDocument();
+    expect(screen.getByText(/Nissan 2.3L Bi-Turbo Diesel/i)).toBeInTheDocument();
+    expect(screen.queryByText(/Torino Tornado Interceptor/i)).not.toBeInTheDocument();
   });
 
   it('calls onSelectEngine when clicking on an engine card', () => {
     const handleSelectEngine = vi.fn();
     render(<EngineCatalog engines={ENGINES_DATA} onSelectEngine={handleSelectEngine} />);
 
-    const engineCardTitle = screen.getByText(/Torino Tornado Interceptor 380W/i);
+    const engineCardTitle = screen.getByText(/Torino Tornado Interceptor/i);
     fireEvent.click(engineCardTitle);
 
     expect(handleSelectEngine).toHaveBeenCalledTimes(1);
     expect(handleSelectEngine).toHaveBeenCalledWith(
-      expect.objectContaining({ id: 'torino-tornado-380w' })
+      expect.objectContaining({ id: 'torino-tornado-230-380w' })
     );
   });
 });

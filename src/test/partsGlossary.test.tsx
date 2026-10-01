@@ -22,7 +22,7 @@ describe('MotorExplorer - PartsGlossary Component Tests', () => {
     const searchInput = screen.getByPlaceholderText(/Buscar pieza por nombre/i);
     fireEvent.change(searchInput, { target: { value: 'Bujía' } });
 
-    expect(screen.getByText('Bujía de Encendido')).toBeInTheDocument();
+    expect(screen.getByText('Bujías de Encendido')).toBeInTheDocument();
     expect(screen.queryByText('Bloque de Motor')).not.toBeInTheDocument();
   });
 
